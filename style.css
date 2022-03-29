@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Fraunces';
+  src: url('fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf') format('truetype');
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'FrauncesItal';
+  src: url('fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf')
+    format('truetype');
+  font-weight: 100 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(100%, 0.75rem + 0.75vw, 1.2rem);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 2rem;
+  width: 100%;
+  display: grid;
+  row-gap: 2em;
+  grid-template-columns: 1fr;
+  background-color: navajowhite;
+  justify-items: center;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-variation-settings: 'wght' 200, 'WONK' 1, 'opsz' 144;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(100%, 1.5rem + 3vw, 3.5rem);
+}
+
+h2 {
+  font-family: 'FrauncesItal', serif;
+  font-size: clamp(100%, 1rem + 1vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(100%, 0.5rem + 1vw, 4rem);
+  font-variation-settings: 'wght' 200;
+  line-height: 0.8;
+  margin-bottom: 1em;
+}
+
+article,
+aside {
+  max-width: 75ch;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+}
+
+article {
+  background-color: #adffde;
+  border: 2px solid #8accb2;
+}
+
+article ul {
+  margin: 0;
+  columns: 2;
+  list-style: none;
+  padding: 0;
+  padding-left: 5%;
+}
+
+aside {
+  background-color: #deadff;
+  border: 2px solid #6c3d8e;
+}
+
+aside p {
+  font-size: clamp(100%, 1rem + 0.5vw, 2rem);
+  font-variation-settings: 'wght' 350;
+}
+
+.bye {
+  font-family: 'FrauncesItal', serif;
+  font-variation-settings: 'WONK' 0.971, 'SOFT' 100, 'opsz' 144;
+  font-style: italic;
+  letter-spacing: 0.277em;
+  font-weight: 660;
+  text-align: center;
+}
+
+section {
+  height: max-content;
+  width: 96%;
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.4);
+}
+
+article img {
+  max-width: 100%;
+}
+
+footer {
+  height: 20vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.sans-serif {
+  font-family: sans-serif;
+}
+
+.serif {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1em;
+}
+
+@media screen and (min-width: 80rem) {
+  main {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 1em;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  article,
+  aside {
+    width: 40vw;
+  }
+  article {
+    order: 1;
+  }
+
+  aside {
+    order: 2;
+  }
+
+  aside p {
+    padding-left: 2em;
+    max-width: 65ch;
+  }
+
+  section {
+    order: 3;
+    grid-column: 1/-1;
+  }
+}
